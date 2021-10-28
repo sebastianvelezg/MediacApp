@@ -1,0 +1,43 @@
+<ion-content>
+  <div class = "top-section ion-padding">
+    <div class = "top-menu">
+      <ion-icon name="menu-outline"></ion-icon>
+      <ion-icon name="medical-outline"></ion-icon>
+    </div>
+    <div class = "tittle">
+      <h2>Home</h2>
+      <ion-select [interfaceOptions]="customActionSheetOptions" value= "Colombia"
+      interface="action" placeholder="select one">
+      <ion-select-option value="antioquia">Medellin</ion-select-option>
+      <ion-select-option value="bogota">Bogota</ion-select-option>
+      </ion-select>
+    </div>
+    <div class="sub-tittle">
+      <h3>Te sientes enfermo hoy?</h3>
+      <p>Si te sientes con algun sintoma relacionado al Covid-19 porfavor reportalos al momento de realizar el triaje.</p>
+    </div>
+    <div class="action-button">
+      <ion-button class="reportar" routerLink = "/reportar-covid">
+        <ion-icon name="sad-outline"></ion-icon>Reportar
+      </ion-button>
+      <ion-button class="bien">
+        <ion-icon name="happy-outline"></ion-icon>Estoy bien
+      </ion-button>
+    </div>
+    <div class="middle-section ion-padding">
+      <h3>Prevención</h3>
+      <div class ="contenido">
+        <ion-col size="4">
+        <img src="/assets/c1.jpg" alt="">
+        <ion-row>
+        <p>Labate las <br> manos</p>
+        <p>Evita el <br> contacto</p>
+        <p>Usa <br> tapabocas</p>
+      </ion-row>
+      </ion-col>
+      </div>
+
+    </div>
+  </div>
+
+</ion-content>

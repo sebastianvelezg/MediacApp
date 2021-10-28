@@ -1,0 +1,87 @@
+.top-section3{
+    min-height: 150px;
+    max-height: 135px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #2B65EC;
+    padding-bottom: 32px;
+    .top-menu3{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        ion-icon{
+            font-weight: bolder;
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+    }
+    .triaje{
+        display: flex;
+        justify-content: space-between;
+        align-items : center;
+        margin-top: 20px;
+        font-weight: bolder;
+        h3{
+            align-items: center;
+            color: #ffffff;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 3rem;
+        }
+    }
+    .triaje-preguntas{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+
+        h3{
+            align-items: center;
+            color: #2B65EC;
+            font-weight: bold;
+            margin: 0;
+            margin-top: 25px;
+        }
+    }
+    .medir{
+        align-self: center;
+        margin-top: 25px;
+        margin-left: 28px;
+        width: 85%;
+        height: 50px;
+        text-transform: none;
+        font-size: 1.6rem;
+    }
+    .boxes{
+        margin-top: 20px;
+        ion-grid, ion-col {
+            padding: 0;
+        }
+    }   
+    .title {
+        ion-icon {
+            font-size: 20px;
+            color: #333;
+            background-color: #fff;
+            padding: 4px;
+            border: 1px solid white;
+            border-radius: 8px;
+            margin-right: 14px;
+            margin-top: 6px;
+        }    
+        p {
+            font-size: 16px;
+            line-height: 20px;
+        }    
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 14px ;
+        }   
+        .mb {
+            padding-bottom: 8px;
+        }
+    }
+}

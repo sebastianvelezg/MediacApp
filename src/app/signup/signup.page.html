@@ -1,0 +1,46 @@
+<ion-content>
+  <div class = "heading">
+    <h1>Registrate</h1>
+    <p>Por favor registrate para poder usar la app.</p>
+  </div>
+  <div class = "social-login">
+    <p>Inicia sesión con tus redes sociales.</p>
+      <ion-button class = "facebook" routerLink = "/thankyou"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+      <ion-button class = "instagram" routerLink = "/thankyou"><ion-icon name="logo-instagram"></ion-icon></ion-button>
+    </div>
+  <div class = "email-login">
+    <p>Registrate con tu correo</p>
+    <div class = "formField">
+      <input type = "text" name = "nombre" id = "nombre ">
+      <label for="nombre" placeholder = "Nombre">Nombre</label>
+    </div>
+    <div class = "formField">
+      <input type = "text" name = "apellido" id = "apellido ">
+      <label for="apellido" placeholder = "Apellido">Apellido</label>
+    </div>
+    <div class = "formField">
+      <input type = "text" name = "correo" id = "correo ">
+      <label for= "correo" placeholder = "Correo">Correo</label>
+    </div>
+    <div class = "formField">
+      <input type = "text" name = "documento de identidad" id = "documento de identidad ">
+      <label for="documento de identidad" placeholder = "Documento de identidad">Documento de identidad</label>
+    </div>
+    <div class = "formField">
+      <input type = "date" name = "fechan" id = "fechan">
+      <label for="fechan" placeholder = "Fechan">Fecha de nacimiento</label>
+    </div>
+    <div class = "other-links">
+      <div class ="politicas-uso">
+        <ion-row>
+        <ion-checkbox></ion-checkbox>
+        <p>acepto los términos y condiciones</p>
+      </ion-row>
+      </div>
+    </div>
+  </div>
+  <div class = "login-button">
+    <ion-button class = "login" routerLink ="/login">Registrarse</ion-button>
+    <p>Ya tienes una cuenta? <span routerLink = "/login"> iniciar secion</span></p>
+  </div>
+</ion-content>

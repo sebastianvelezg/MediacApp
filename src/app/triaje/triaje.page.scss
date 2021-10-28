@@ -1,0 +1,119 @@
+.top-section3{
+    min-height: 150px;
+    max-height: 360px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #2B65EC;
+    padding-bottom: 32px;
+    .datos-triaje{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 8px;
+        font-weight: bolder;
+        h2{
+            margin-top: 1px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    }
+    .triaje{                
+        p{
+            margin-left: 1px;
+            margin-top: 10px;
+            font-weight: bolder;
+            color: #ffffff;
+            font-size: 1.5rem;           
+            ion-spinner{
+                margin-left: 15px;
+                color: #ffffff;             
+            }
+        }     
+    }
+    
+    .pregunta1{      
+        p{
+            margin-left: 1px;
+            margin-top: 20px;
+            font-weight: bolder;
+            color: #2B65EC;
+            font-size: 1.5rem;
+        }
+        .respuesta1{
+            p{
+                margin-left: 1px;
+                margin-top: 0px;
+                font-weight: bolder;
+                color: #333;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .pregunta2{       
+        p{
+            margin-left: 1px;
+            margin-top: 10px;
+            font-weight: bolder;
+            color: #2B65EC;
+            font-size: 1.5rem;
+        }
+        .respuesta2{
+            p{
+                margin-left: 1px;
+                margin-top: 0px;
+                font-weight: bolder;
+                color: #333;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .pregunta3{       
+        p{
+            margin-left: 1px;
+            margin-top: 10px;
+            font-weight: bolder;
+            color: #2B65EC;
+            font-size: 1.5rem;
+        }
+        .respuesta3{
+            p{
+                margin-left: 1px;
+                margin-top: 0px;
+                font-weight: bolder;
+                color: #333;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .pregunta4{       
+        p{
+            margin-left: 1px;
+            margin-top: 10px;
+            font-weight: bolder;
+            color: #2B65EC;
+            font-size: 1.5rem;
+        }
+        .respuesta4{
+            p{
+                margin-left: 1px;
+                margin-top: 0px;
+                font-weight: bolder;
+                color: #333;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .finalizar-triaje{
+        align-self: center;
+        margin-top: 25px;
+        margin-left: 28px;
+        margin-bottom: 30px;
+        width: 85%;
+        height: 50px;
+        text-transform: none;
+        font-size: 1.6rem;
+    }
+}
