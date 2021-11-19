@@ -1,0 +1,39 @@
+<ion-content>
+  <div class = "heading">
+    <h1>Inicia sesión</h1>
+    <p>Por favor inicia sesión para poder continuar</p>
+  </div>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+    
+      <ion-item>
+      <ion-label position="floating">documento de identidad</ion-label>
+      <ion-input type="text"
+        name="documentoIdentidad"
+        
+        [(ngModel)]="usuario.documentoIdentidad"
+        required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password"
+        name="password"
+        [(ngModel)]="usuario.password"
+        required>
+      </ion-input>
+    </ion-item>
+
+    </ion-list>
+
+    <ion-button expand="full" type="submit"
+                [disabled]="formulario.invalid">
+                Iniciar seccion
+    </ion-button>
+  
+    
+
+  </form>
+
+</ion-content>

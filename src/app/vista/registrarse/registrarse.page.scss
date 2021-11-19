@@ -59,6 +59,7 @@
         text-align: start;
         color: #ccc;
         padding-left: 40px;
+        --placeholder-color: #ccc;
    
     }
     input:focus + label,
@@ -73,6 +74,10 @@
         top: 0em;
         left: 2em;
     }
+}
+.fecha{
+    font-size: 1.3rem;
+    color: #838383;
 }
 .other-links{
     margin-left: 7%;

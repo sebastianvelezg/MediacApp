@@ -1,19 +1,30 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    redirectTo:'welcome', pathMatch:'full'
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
+
+  
   {
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
+  {
+    path: 'tab1',
+    loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
+  },
+  {
+  path: 'tab2',
+    loadChildren: () => import('./tab2/tab2.module').then( m => m.Tab2PageModule)
+  },
+  {
+    path: 'tab3',
+      loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
+    },
   {
     path: 'thankyou',
     loadChildren: () => import('./thankyou/thankyou.module').then( m => m.ThankyouPageModule)
@@ -29,7 +40,17 @@ const routes: Routes = [
   {
     path: 'reportar-covid',
     loadChildren: () => import('./reportar-covid/reportar-covid.module').then( m => m.ReportarCovidPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./vista/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'registrarse',
+    loadChildren: () => import('./vista/registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
   }
+
+
 ];
 @NgModule({
   imports: [

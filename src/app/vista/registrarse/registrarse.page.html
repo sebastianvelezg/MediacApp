@@ -1,0 +1,72 @@
+<ion-content>
+  <div class = "heading">
+    <h1>Registrate</h1>
+    <p>Por favor registrate para poder usar la app.</p>
+  </div>
+  <div class = "email-login">
+    <form #formulario="ngForm" (ngSubmit)="registrarse()">
+    <p>Registrate con tu correo</p>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type = "text" name = "nombre" id = "nombre "
+        [(ngModel)] = "registro.nombre"
+        required>
+        </ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input type = "text" name = "apellido" id= "apellido"
+        [(ngModel)] = "registro.apellido"
+        required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input type = "text" name = "correo" id = "correo "
+        [(ngModel)] = "registro.correo"
+        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type = "password" name = "contraseña" id= "contraseña"
+        [(ngModel)] = "registro.password"
+        required>
+        </ion-input>
+      </ion-item>
+      
+
+      <ion-item>
+        <ion-label position="floating">Documento de identidad</ion-label>
+        <ion-input type = "text" name = "documento de identidad" id = "documento de identidad "
+        [(ngModel)] = "registro.documentoIdentidad"
+          required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fecha de nacimiento</ion-label>
+        <ion-input type = "date" name = "fechan" id = "fechan"
+        [(ngModel)] = "fecha"
+          required>
+        </ion-input>
+      </ion-item>
+        <div class = "other-links">
+          <div class ="politicas-uso">
+            <ion-row>
+            <ion-checkbox></ion-checkbox>
+            <p>acepto los términos y condiciones</p>
+          </ion-row>
+          </div>
+        </div>
+      
+      <ion-button expand="full" type="submit"
+                [disabled]="formulario.invalid">
+                Registrarse
+    </ion-button>
+    </form>
+    <p>Ya tienes una cuenta? <span routerLink = "/inicio"> iniciar sesion</span></p>
+  </div>
+</ion-content>
