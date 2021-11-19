@@ -12,13 +12,13 @@ export class ApiService {
   
   constructor(private http:HttpClient) { }
 
-  loginByEmail(usuario:string, password:string):Observable<ResponseI>{
+  loginByEmail(usuario:string , password:string):Observable<ResponseI>{
     let direccion = this.url + "iniciarSesion.php?"+"documentoIdentidad="+usuario+"&contrasena="+password;
     return this.http.get<ResponseI>(direccion);
   }
   registrar(usuario:string,nombre:string,apellido:string,correo:string, password:string,fechaNacimiento:Date):Observable<ResponseI>{
 
-    let direccion = this.url + "registro.php?"+"documentoIdentidad="+usuario+"&nombre="+nombre+"&apellido="+apellido+"&correo="+correo+"&contrasena="+password+"&fechaNacimiento="+fechaNacimiento;
+    let direccion = this.url + "registro.php?"+"documentoIdentidad=\""+ usuario + "\"" +"&nombre=\""+nombre+"\""+"&apellido=\""+apellido+"\""+"&correo=\""+correo+"\""+"&contrasena=\""+password+"\""+"&fechaNacimiento=\""+fechaNacimiento+"\"";
     return this.http.get<ResponseI>(direccion);
     
   }

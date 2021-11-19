@@ -26,6 +26,7 @@ export class InicioPage implements OnInit {
   onSubmit(){
     this.api.loginByEmail(this.usuario.documentoIdentidad,this.usuario.password).subscribe(data=> {
       console.log(data)
+      
     })
     
     
