@@ -9,15 +9,15 @@
       <ion-button class = "instagram" routerLink = "/thankyou"><ion-icon name="logo-instagram"></ion-icon></ion-button>
     </div>
   <div class = "email-login">
-    <p>Inicia secion con tu correo</p>
+    
+    <p>Inicia seccion con tu correo</p>
+    <form [formGroup]= "loginForm" (ngSubmit) = "onLogin(loginForm.value)">
     <div class = "formField">
-      <input type = "text" name = "email" id = "email ">
-      <label for="email" placeholder = "Email">Email</label>
+      <input type = "text"  id = "email "  placeholder = "Email"  formControlName = "usuario">
+      <input type = "password"  id = "password "   placeholder = "Password" formControlName= "password" >
+      <input type="submit" class="fadeIn third" value="Iniciar seccion">
     </div>
-    <div class = "formField">
-      <input type = "password" name = "password" id = "password ">
-      <label for= "password" placeholder = "Password">Password </label>
-    </div>
+    </form>
     <div class = "other-links">
       <div class ="remember-me">
         <ion-checkbox></ion-checkbox>
@@ -26,8 +26,5 @@
       <p class = "forgot">Olvidaste tu contrasena?</p>
     </div>
   </div>
-  <div class = "login-button">
-    <ion-button class = "login" routerLink ="/thankyou">Iniciar secion</ion-button>
-    <p>No tienes una cuenta?<span routerLink = "/signup"> Signup</span></p>
-  </div>
+
 </ion-content>

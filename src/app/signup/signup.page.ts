@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupPage{
 
+  registro={
+    documentoIdentidad:'',
+    password:'',
+    nombre:'',
+    apellido:'',
+    correo:'',
+    fecha:''
+  };
   constructor() { }
 
   ngOnInit() {
   }
+  registrarse(){
 
+    
+    
+  }
 }
