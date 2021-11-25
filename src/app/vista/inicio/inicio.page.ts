@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavController,NavParams } from '@ionic/angular';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { ApiService } from 'src/app/servicios/api/api.service';
+import { Tab1Page } from 'MediacApp/src/app/tab1/tab1.page';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-inicio',
@@ -19,16 +22,21 @@ export class InicioPage implements OnInit {
     documentoIdentidad:'',
     password:''
   };
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService,private router:Router) { }
 
   ngOnInit() {
   }
   onSubmit(){
     this.api.loginByEmail(this.usuario.documentoIdentidad,this.usuario.password).subscribe(data=> {
       console.log(data)
-      
+      if(data.result=='0'){
+        alert("acceso denegado, documento, contraseña incorrectas o el usuario no existe")
+      }else {
+        this.router.navigate(['/tab1'])
+      }
+
     })
-    
+  
     
   }
 }
