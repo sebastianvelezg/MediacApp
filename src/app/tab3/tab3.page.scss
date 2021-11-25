@@ -105,5 +105,39 @@
             }
         }
     }
+    .login-button {
+        text-align: center;
+        margin-top: 10px;
+        .login {
+            width: 85%;
+            height: 50x;
+            text-transform: none;
+            font-size: 1.6rem;
+        }
+        .tab2{
+            width: 30%;
+            height: 30x;
+            text-transform: none;
+            font-size: 1.0rem;  
+        }
+        .tab1{
+            width: 30%;
+            height: 30x;
+            text-transform: none;
+            font-size: 1.0rem;  
+        }
+        .salir{
+            width: 30%;
+            height: 30x;
+            text-transform: none;
+            font-size: 1.0rem;  
+        }
+        p{
+            color: #838383;
+            span{
+                color: #3880ff;
+            }
+        }
+    }
     
     }

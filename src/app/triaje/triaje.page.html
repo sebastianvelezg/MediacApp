@@ -4,7 +4,8 @@
       <h2>Midiendo datos</h2>
     </div>
     <ion-progress-bar color="secondary" value="0.65"></ion-progress-bar>
-    <div class = "triaje">
+    
+    <div class = "triaje" >
       <ion-row>
          <ion-col>
            <p>Temperatura<ion-spinner name="dots"></ion-spinner></p>
@@ -13,133 +14,71 @@
            <p>Presion arterial<ion-spinner name="dots"></ion-spinner></p>
           </ion-col>
       </ion-row>
-    </div>
-    <div class="pregunta1">
-      <ion-col>
-        <p>Pregunta1</p>
-        <div class="respuesta1">
-          <div class ="respuesta1">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta1">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta1">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta1">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-       </div>
-       </ion-col>
-    </div>
-    <div class="pregunta2">
-      <ion-col>
-        <p>Pregunta2</p>
-        <div class="respuesta2">
-          <div class ="respuesta2">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta2">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta2">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta2">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-       </div>
-       </ion-col>
-    </div>
-    <div class="pregunta3">
-      <ion-col>
-        <p>Pregunta3</p>
-        <div class="respuesta3">
-          <div class ="respuesta3">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta3">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta3">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta3">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-       </div>
-       </ion-col>
-    </div>
-    <div class="pregunta4">
-      <ion-col>
-        <p>Pregunta4</p>
-        <div class="respuesta4">
-          <div class ="respuesta4">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta4">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta4">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-          <div class ="respuesta4">
-            <ion-row>
-            <ion-checkbox></ion-checkbox>
-            <p>Respuesta</p>
-          </ion-row>
-          </div>
-       </div>
-       </ion-col>
-    </div>
-    <div>
-      <ion-button class = "finalizar-triaje" routerLink = "/tabs/tab2" > FINALIZAR</ion-button>
+      <ion-item>
+        <ion-label>¿Ha padecido Fiebre o escalofríos,Tos,Dificultad para respirar,Pérdida reciente del olfato o el gusto, Dolor de garganta o garganta en los ultimos 15 días?</ion-label>
+        <ion-select placeholder="Selecciona una"  [(ngModel)]="primeraPregunta" (ionChange)="setPrimeraPregunta()">
+          <ion-select-option value="10">Si</ion-select-option>
+          <ion-select-option value="0">No</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>2.¿Desde Cuándo se siente así?</ion-label>
+        <ion-select placeholder="Selecciona una"  [(ngModel)]="segundaPregunta" (ionChange)="setSegundaPregunta()">
+          <ion-select-option value="0">Hace un día</ion-select-option>
+          <ion-select-option value="2">Hace tres días</ion-select-option>
+          <ion-select-option value="3">Hace Una semana</ion-select-option>
+          <ion-select-option value="5">Hace más de dos semanas</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>3.¿Le ha ocurrido antes?</ion-label>
+        <ion-select placeholder="Selecciona una"  [(ngModel)]="terceraPregunta" (ionChange)="setTerceraPregunta()">
+          <ion-select-option value="0">Si</ion-select-option>
+          <ion-select-option value="10">No</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>4.¿Tiene alguna enfermedad de base?</ion-label>
+        <ion-select placeholder="Selecciona una"  [(ngModel)]="cuartaPregunta" (ionChange)="setCuartaPregunta()">
+          <ion-select-option value="2">Hipertension</ion-select-option>
+          <ion-select-option value="1">Diabetes</ion-select-option>
+          <ion-select-option value="3">Es inmunosuprimido</ion-select-option>
+          <ion-select-option value="4">EPOC</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>5.¿Cuál es su temperatura Axilar?</ion-label>
+        <ion-select placeholder="Selecciona una"  [(ngModel)]="quintaPregunta" (ionChange)="setQuintaPregunta()">
+          <ion-select-option value="2"> Menos de 36.5</ion-select-option>
+          <ion-select-option value="0"> Igual de 36.5</ion-select-option>
+          <ion-select-option value="8">Mayor de 36.5</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>6.¿Cuál es su presión arterial?</ion-label>
+        <ion-select placeholder="Selecciona una"  [(ngModel)]="sextaPregunta" (ionChange)="setSextaPregunta()">
+          <ion-select-option value="0"> Menos de 120/80</ion-select-option>
+          <ion-select-option value="0"> Entre 120/80-130/85</ion-select-option>
+          <ion-select-option value="10"> Entre 140/90-159/99</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>7¿Cuál es su nivel de oxigenación?</ion-label>
+        <ion-select placeholder="Selecciona una"  [(ngModel)]="septimaPregunta" (ionChange)="setSeptimaPregunta()">
+          <ion-select-option value="8"> Menos de 90</ion-select-option>
+          <ion-select-option value="2"> Igual 90</ion-select-option>
+          <ion-select-option value="0"> Mayor 95</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>8.¿Ha viajado a un país con alta transmisión de COVID-19 o ha tenido contacto con alguien diagnosticado positivo o presunción de COVID-19?</ion-label>
+        <ion-select placeholder="Selecciona una"  [(ngModel)]="octavaPregunta" (ionChange)="setOctavaPregunta()">
+          <ion-select-option value="10">SI</ion-select-option>
+          <ion-select-option value="0">NO</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-button  (click)="resultado()" class = "finalizar-triaje"  > Resultado</ion-button>
+      <ion-button  routerLink = "../tab2" class = "finalizar-triaje"  > FINALIZAR</ion-button>
     </div>
   </div>
 </ion-content>

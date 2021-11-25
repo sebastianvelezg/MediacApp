@@ -99,6 +99,41 @@
         }
         }
     }
+ 
+    .login-button {
+        text-align: center;
+        margin-top: 300px;
+        .login {
+            width: 85%;
+            height: 50x;
+            text-transform: none;
+            font-size: 1.6rem;
+        }
+        .tab2{
+            width: 33%;
+            height: 30x;
+            text-transform: none;
+            font-size: 1.0rem;  
+        }
+        .tab3{
+            width: 33%;
+            height: 30x;
+            text-transform: none;
+            font-size: 1.0rem;  
+        }
+        .menu{
+            width: 33%;
+            height: 30x;
+            text-transform: none;
+            font-size: 1.0rem;  
+        }
+        p{
+            color: #838383;
+            span{
+                color: #3880ff;
+            }
+        }
+    }
 .middle-section{
     display: flex;
     flex-direction: column;
@@ -128,4 +163,6 @@
            }
        }
    }
+   
+
 }
