@@ -13,9 +13,9 @@
            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
          </ion-avatar>
          <ion-col>
-           <p>Sebastian Velez</p>
+           <p>{{perfil.Nombre +' '+ perfil.Apellido}}</p>
            <div class="edad">
-           <p>21 Años</p>
+           <p>{{perfil.Edad}}</p>
           </div>
           </ion-col>
            
@@ -28,31 +28,31 @@
       <ion-item>
         <ion-label>
           <ion-text>Correo</ion-text>
-          <p><ion-text color="#333">sebastian@gmail.com</ion-text></p>
+          <p><ion-text color="#333">{{perfil.Correo}}</ion-text></p>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
           <ion-text>Fecha de nacimiento</ion-text>
-          <p><ion-text color="dark">09/02/1999</ion-text></p>
+          <p><ion-text color="dark">{{perfil.FechaNacimiento}}</ion-text></p>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
           <ion-text>Genero</ion-text>
-          <p><ion-text color="dark">Masculino</ion-text></p>
+          <p><ion-text color="dark">{{perfil.Genero}}</ion-text></p>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
           <ion-text>Telefono</ion-text>
-          <p><ion-text color="dark">3104188687</ion-text></p>
+          <p><ion-text color="dark">{{perfil.Telefono}}</ion-text></p>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
           <ion-text>ID</ion-text>
-          <p><ion-text color="dark">1039474149</ion-text></p>
+          <p><ion-text color="dark">{{perfil.DocumentoIdentidad}}</ion-text></p>
         </ion-label>
       </ion-item>
     </ion-list>
@@ -63,31 +63,31 @@
       <ion-item>
         <ion-label>
           <ion-text>Peso</ion-text>
-          <p><ion-text color="dark">61.5</ion-text></p>
+          <p><ion-text color="dark">{{perfil.Peso}}</ion-text></p>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
           <ion-text>Estatura</ion-text>
-          <p><ion-text color="dark">1.77 </ion-text></p>
+          <p><ion-text color="dark">{{perfil.Estatura}} </ion-text></p>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
           <ion-text>Alergias</ion-text>
-          <p><ion-text color="dark">Ninguna</ion-text></p>
+          <p><ion-text color="dark">{{perfil.Alergia}}</ion-text></p>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
           <ion-text>enfermedades</ion-text>
-          <p><ion-text color="dark">Ninguna</ion-text></p>
+          <p><ion-text color="dark">{{perfil.Enfermedad}}</ion-text></p>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
           <ion-text>EPS</ion-text>
-          <p><ion-text color="dark">SURA</ion-text></p>
+          <p><ion-text color="dark">{{perfil.Eps}}</ion-text></p>
         </ion-label>
       </ion-item>
     </ion-list>

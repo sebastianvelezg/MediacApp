@@ -4,7 +4,7 @@ import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { ApiService } from 'src/app/servicios/api/api.service';
 import { Tab1Page } from 'MediacApp/src/app/tab1/tab1.page';
 import { Router } from '@angular/router';
-
+import { DatosUsuarioService } from 'src/app/servicios/datos-usuario.service';
 
 @Component({
   selector: 'app-inicio',
@@ -22,7 +22,7 @@ export class InicioPage implements OnInit {
     documentoIdentidad:'',
     password:''
   };
-  constructor(private api:ApiService,private router:Router) { }
+  constructor(private api:ApiService,private router:Router,private datoUsuario:DatosUsuarioService) { }
 
   ngOnInit() {
   }
@@ -32,7 +32,8 @@ export class InicioPage implements OnInit {
       if(data.result=='0'){
         alert("acceso denegado, documento, contraseña incorrectas o el usuario no existe")
       }else {
-        this.router.navigate(['/tab1'])
+        this.router.navigate(['/tab3'])
+        this.datoUsuario.setdatoUsuario(data.result);
       }
 
     })
